@@ -78,7 +78,7 @@ h1 {
     padding: 10px;
 }
 
-.days input {
+.days select {
     padding: 10px;
     margin: 0 0 0 10px;
     background-color: transparent;
@@ -89,6 +89,9 @@ h1 {
     font-weight: lighter;
     width: 130px;
     color: white;
+}
+option{
+    color: #000;
 }
 .container.a{
     position: fixed;
@@ -134,11 +137,11 @@ h1 {
     text-align: center;
 }
 
-.days input {
+.days select {
     transition: border-color 0.3s ease-in-out; /* Add a smooth transition to the border color */
 }
 
-.days input:focus {
+.days select:focus {
     border-color: #ff7f50; /* Change border color when input is focused */
 }
 
