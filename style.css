@@ -1,0 +1,212 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(75, 46, 46);
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    width: 310px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: #f9f9f9;
+    animation: fade-in 0.5s ease-out;
+}
+
+
+/* Rest of the CSS remains the same */
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.f {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    color: #f9f9f9;
+}
+
+.inputs {
+    display: flex;
+}
+
+.inp {
+    display: flex;
+    padding: 0;
+}
+
+.inp input {
+    padding: 0;
+    margin: 0 0 0 10px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 26px;
+    font-weight: bolder;
+    width: 130px;
+    color: white;
+}
+
+.days {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.days input {
+    padding: 10px;
+    margin: 0 0 0 10px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: lighter;
+    width: 130px;
+    color: white;
+}
+.container.a{
+    position: fixed;
+    bottom: 10px;
+    right: -1000px;
+    background-color: black;
+    border-radius: 0;
+    box-shadow: none;
+    transition: all 1s ease-in-out;
+}
+.container.a h1{
+    margin: 0;
+}
+.container.a .f{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container.a .f button{
+    padding: 10px;
+    background-color: #ff7f50;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 16px;
+    width: 49%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.inputs {
+    flex-direction: column; /* Display input elements vertically */
+    align-items: center;
+}
+
+.inp input {
+    text-align: center;
+}
+
+.days input {
+    transition: border-color 0.3s ease-in-out; /* Add a smooth transition to the border color */
+}
+
+.days input:focus {
+    border-color: #ff7f50; /* Change border color when input is focused */
+}
+
+/* Animations */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale-in {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.container {
+    animation: fade-in 0.5s ease-out, scale-in 0.3s ease-out;
+}
+.trls {
+    position: relative;
+    width: 40px;
+    height: 26px;
+    cursor: pointer;
+  }
+  
+  .trls input[type="checkbox"] {
+    opacity: 1;
+  }
+  
+  .trls label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 26px;
+    border-radius: 50px;
+    background-color: #eee;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .trls input[type="checkbox"]:checked + label {
+    background-color: #ff7f50;
+  }
+  
+  .ball {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .trls input[type="checkbox"]:checked + label + .ball {
+    transform: translateX(100%);
+  }
+  

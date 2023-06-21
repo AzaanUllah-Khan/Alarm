@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 contenteditable="true" id="an">Alarm (1)</h1>
+        <div class="f">
+            <div class="inputs">
+                <div class="inp">
+                    <input type="number" id="hour" placeholder="24 hrs">
+                    <input type="number" id="min" placeholder="Minutes">
+                </div>
+                <div class="rem">
+                    <p id="remaining"></p>
+                </div>
+            </div>
+            <div class="trls">
+                <input type="checkbox" id="trls">
+                <label for="trls"></label>
+                <span class="ball"></span>
+              </div>
+                           
+        </div>
+        <div class="days">
+            <input type="text" placeholder="Add Days" id="day"
+                title="You can only add one day or for everyday you can type 'All'">
+        </div>
+    </div>
+    <div class="container a" id="alarmm">
+        <h1 id="ann">Alarm (1)</h1>
+        <div class="f">
+            <button onclick="stop()">Stop</button>
+            <button onclick="set()">Snooze</button>
+        </div>
+    </div>
+    <audio src="twirling-intime-lenovo-k8-note-alarm-tone-41440.mp3" id="a"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
